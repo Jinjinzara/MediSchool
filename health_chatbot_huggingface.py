@@ -5,7 +5,7 @@ import requests
 # Hugging Face API 키 입력
 hf_api_key = st.text_input("🔑 Hugging Face API 키를 입력하세요", type="password")
 API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2"
-st.title("MediSchool (건강진단챗봇)")
+
 # 진단 데이터
 disease_data = [
     {
@@ -64,7 +64,7 @@ def ask_huggingface(prompt, hf_api_key):
         return f"❌ 오류 발생: {response.text}"
 
 # Streamlit UI
-st.title("🏫 무료 GPT + 건강 진단 챗봇 (Hugging Face)")
+st.title("MediSchool (건강진단챗봇)")
 
 체온 = st.slider("🌡️ 현재 체온을 선택하세요", 35.0, 41.0, 36.8, 0.1)
 선택한_증상들 = st.multiselect("🤒 증상을 선택하세요", options=all_symptoms)
