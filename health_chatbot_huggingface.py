@@ -5,7 +5,7 @@ import requests
 # Hugging Face API 키 입력
 hf_api_key = st.text_input("🔑 Hugging Face API 키를 입력하세요", type="password")
 API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2"
-
+st.title("MediSchool (건강진단챗봇)")
 # 진단 데이터
 disease_data = [
     {
